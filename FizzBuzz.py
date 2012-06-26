@@ -13,6 +13,51 @@ Q2. How will you change the api of the report method to make it more testable ? 
 
 Ans :-
      1. For handelling the file pale we wili use file handler 
+     
+     class FizzBuzz(object):
+
+    def report(self, numbers, file_handle):
+
+        for number in numbers:
+
+            msg = str(number) + " "
+
+            fizzbuzz_found = False
+
+            if number % 3 == 0:
+
+                msg += "fizz "
+
+                fizzbuzz_found = True
+
+            if number % 5 == 0:
+
+                    msg += "buzz "
+
+                    fizzbuzz_found = True
+
+            if fizzbuzz_found:
+
+                        file_handle.write(msg + "\n")
+
+ 
+
+            
+
+ 
+
+ 
+
+if "__main__" == __name__:
+
+        fb = FizzBuzz()
+
+        file_handle = open('temp.txt', 'w') # can create open wrapper
+
+        fb.report(range(100), file_handle)
+
+        file_handle.close()
+
 
 """
 class FizzBuzz(object):

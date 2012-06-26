@@ -6,7 +6,8 @@ Q1. Why is the report method untestable ? [2 pts]
 
 Q2. How will you change the api of the report method to make it more testable ? [2 pts]
 
-
+Ans :-
+     1. For handelling the file pale we wili use file handler 
 
 """
 class FizzBuzz(object):

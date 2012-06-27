@@ -25,7 +25,20 @@ Q4. Implement MyStub class so that you can send it as a fake object to the
 
 """
 class MyStub(object):
-    pass
+    def __init__(self):
+        self.openflag=False
+        self.values=[]    # create empty list
+
+    def open(self):
+        self.openflag = True #"open fake file"
+
+    def write(self,msg):
+        self.values.append(msg) # append values to list
+
+    def close():
+        self.openflag = False # close fake "file"
+
+
 
 
 
